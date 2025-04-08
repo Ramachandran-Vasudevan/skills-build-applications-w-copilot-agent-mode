@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-o(%$w+=(a@xqa_$xhj=*ilv6r7h53ao4fvhl@9(g%o_mejw23o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'probable-meme-xr767wrv57gcjq-8000.app.github.dev']
 
 
 # Application definition
@@ -138,3 +138,10 @@ CORS_ALLOW_HEADERS = [
     "content-type",
     "authorization",
 ]
+
+# Add REST framework settings to enforce JSON responses
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
